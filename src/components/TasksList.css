@@ -1,0 +1,102 @@
+/* TasksList.css */
+
+.tasks-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tasks-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.tasks-container ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tasks-container li {
+    background-color: #fff;
+    border-radius: 8px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tasks-container li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-content {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.task-content p:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.task-content p:nth-child(2) {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.task-content p:last-child {
+    color: #3498db;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.task-actions button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+
+
+.loading-message, .error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.loading-message {
+    color: #3498db;
+}
+
+.error-message {
+    color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tasks-container ul {
+        grid-template-columns: 1fr;
+    }
+}
