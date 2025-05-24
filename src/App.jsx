@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import TasksList from './components/tasksList';
+import TasksList from './components/TasksList';
 import AddTasks from './components/AddTasks';
 function App() {
 
